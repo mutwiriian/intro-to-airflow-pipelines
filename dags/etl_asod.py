@@ -37,8 +37,9 @@ def apod_dag():
         image_dir = os.path.join(current_dir,"images")
         pathlib.Path(image_dir).mkdir(parents=True,exist_ok=True)
 
-        #api_key = "DEMO_KEY"
-        api_key = "*******************" # key extracted from APOD API
+        
+        # api_key = "*******************" # key extracted from APOD API
+        api_key = "DEMO_KEY"
 
         url = f'https://api.nasa.gov/planetary/apod?api_key={api_key}'
         response = requests.get(url).json()
